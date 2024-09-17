@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 #
-# TEKSI Wastewater
-# Copyright (C) 2012  Matthias Kuhn
+# TEKSI INTERLIS Tool
+# Copyright (C) 2024  TEKSI
 # -----------------------------------------------------------
 #
 # licensed under the terms of GNU GPL 2
