@@ -12,15 +12,15 @@ def geometryDigitized(fid, layer, tool):
 
 def mapToolDeactivated(tool):
     tool.deactivated.disconnect()
-    qgis.utils.plugins["teksi_wastewater"].iface.mapCanvas().unsetMapTool(tool)
+    qgis.utils.plugins["teksi_interlis_tool"].iface.mapCanvas().unsetMapTool(tool)
     tool.deleteLater()
 
 
 def digitizeDrainageChannel(fid, layerid):
     layer = QgsProject.instance().mapLayer(layerid)
     layer.startEditing()
-    tool = TwwMapToolDigitizeDrainageChannel(qgis.utils.plugins["teksi_wastewater"].iface, layer)
-    qgis.utils.plugins["teksi_wastewater"].iface.mapCanvas().setMapTool(tool)
+    tool = TwwMapToolDigitizeDrainageChannel(qgis.utils.plugins["teksi_interlis_tool"].iface, layer)
+    qgis.utils.plugins["teksi_interlis_tool"].iface.mapCanvas().setMapTool(tool)
     tool.geometryDigitized.connect(lambda: geometryDigitized(fid, layer, tool))
     # form.window().hide()
     tool.deactivated.connect(lambda: mapToolDeactivated(tool))

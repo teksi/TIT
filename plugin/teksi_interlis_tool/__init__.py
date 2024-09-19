@@ -24,6 +24,6 @@
 
 
 def classFactory(iface):
-    from .teksi_wastewater_plugin import TeksiWastewaterPlugin
+    from .teksi_interlis_tool_plugin import TeksiInterlisToolPlugin
 
-    return TeksiWastewaterPlugin(iface)
+    return TeksiInterlisToolPlugin(iface)

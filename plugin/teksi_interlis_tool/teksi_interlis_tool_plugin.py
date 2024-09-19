@@ -58,7 +58,7 @@ def locale(values, feature, parent):
     return QSettings().value("locale/userLocale", QLocale.system().name())
 
 
-class TeksiWastewaterPlugin:
+class TeksiInterlisToolPlugin:
     """
     A plugin for wastewater management
     https://github.com/teksi/wastewater
@@ -199,7 +199,7 @@ class TeksiWastewaterPlugin:
 
         self.connectNetworkElementsAction = QAction(
             QIcon(os.path.join(plugin_root_path(), "icons/link-wastewater-networkelement.svg")),
-            QApplication.translate("teksi_wastewater", "Connect wastewater networkelements"),
+            QApplication.translate("teksi_interlis_tool", "Connect wastewater networkelements"),
             self.iface.mainWindow(),
         )
         self.connectNetworkElementsAction.setEnabled(False)

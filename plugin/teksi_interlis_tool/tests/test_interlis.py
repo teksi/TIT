@@ -5,12 +5,12 @@ import sys
 import xml.etree.ElementTree as ET
 
 from qgis.testing import start_app, unittest
-from teksi_wastewater.interlis import config
-from teksi_wastewater.interlis.interlis_importer_exporter import (
+from teksi_interlis_tool.interlis import config
+from teksi_interlis_tool.interlis.interlis_importer_exporter import (
     InterlisImporterExporter,
 )
-from teksi_wastewater.interlis.utils.ili2db import InterlisTools
-from teksi_wastewater.utils.database_utils import DatabaseUtils
+from teksi_interlis_tool.interlis.utils.ili2db import InterlisTools
+from teksi_interlis_tool.utils.database_utils import DatabaseUtils
 
 # Display logging in unittest output
 logger = logging.getLogger()

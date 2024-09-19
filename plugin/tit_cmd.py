@@ -4,15 +4,15 @@ import argparse
 import sys
 
 from qgis.core import QgsApplication
-from teksi_wastewater.interlis import config
-from teksi_wastewater.interlis.interlis_importer_exporter import (
+from teksi_interlis_tool.interlis import config
+from teksi_interlis_tool.interlis.interlis_importer_exporter import (
     InterlisImporterExporter,
     InterlisImporterExporterError,
 )
-from teksi_wastewater.interlis.processing_algs.extractlabels_interlis import (
+from teksi_interlis_tool.interlis.processing_algs.extractlabels_interlis import (
     ExtractlabelsInterlisAlgorithm,
 )
-from teksi_wastewater.utils.database_utils import DatabaseUtils
+from teksi_interlis_tool.utils.database_utils import DatabaseUtils
 
 QgsApplication.setPrefixPath("/usr", True)
 
@@ -242,12 +242,12 @@ class TeksiWastewaterCmd:
 
 
 if __name__ == "__main__":
-    teksi_wastewater_cmd = TeksiWastewaterCmd()
+    teksi_interlis_tool_cmd = TeksiWastewaterCmd()
 
-    teksi_wastewater_cmd.parse_arguments()
+    teksi_interlis_tool_cmd.parse_arguments()
 
-    if not teksi_wastewater_cmd.args:
-        teksi_wastewater_cmd.parser.print_help(sys.stderr)
+    if not teksi_interlis_tool_cmd.args:
+        teksi_interlis_tool_cmd.parser.print_help(sys.stderr)
         exit(1)
 
-    teksi_wastewater_cmd.execute()
+    teksi_interlis_tool_cmd.execute()
